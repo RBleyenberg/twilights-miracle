@@ -8,7 +8,8 @@ describe('About Page', () => {
 
   it('should display main heading', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ANGULAR NGRX MATERIAL STARTER');
+    // @ts-ignore
+    expect(page.getParagraphText()).toEqual('ERP software gratis - Dare-solutions');
   });
 
   it('should display "Geting Started" section', () => {
@@ -24,6 +25,7 @@ describe('About Page', () => {
     page
       .getActionButton(0)
       .click()
+      // @ts-ignore
       .then(() => expect(getCurrentRouteUrl()).toBe('features'));
   });
 });
