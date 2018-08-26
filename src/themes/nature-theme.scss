@@ -1,0 +1,9 @@
+$dare-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$dare-nature-accent: mat-palette($mat-deep-purple, 300);
+$dare-nature-warn: mat-palette($mat-red, 600);
+
+$dare-nature-theme: mat-light-theme(
+  $dare-nature-primary,
+  $dare-nature-accent,
+  $dare-nature-warn
+);

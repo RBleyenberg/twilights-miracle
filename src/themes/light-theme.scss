@@ -1,0 +1,9 @@
+$dare-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$dare-light-accent: mat-palette($mat-brown, 200);
+$dare-light-warn: mat-palette($mat-deep-orange, 200);
+
+$dare-light-theme: mat-light-theme(
+  $dare-light-primary,
+  $dare-light-accent,
+  $dare-light-warn
+);

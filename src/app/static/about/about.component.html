@@ -1,0 +1,37 @@
+<div class="background">
+  <div class="gradient">
+    <div class="container">
+      <h1>{{ 'dare.title' | translate }}</h1>
+      <div class="actions">
+        <a [ngClass]="routeAnimationsElements"
+           mat-raised-button class="actions-main" color="primary" routerLink="../features">
+          {{ 'dare.menu.features' | translate }}
+        </a>
+        <a mat-raised-button class="actions-main" color="accent" routerLink="../modules"
+           [ngClass]="routeAnimationsElements">
+          {{ 'dare.menu.modules' | translate }}
+        </a>
+        <a mat-raised-button class="actions-main" color="warn" routerLink="../settings"
+           [ngClass]="routeAnimationsElements">
+          {{ 'dare.about.change-theme' | translate }}
+        </a>
+        <br>
+      </div>
+      <div class="get-started" [ngClass]="routeAnimationsElements">
+        <h2>{{ 'dare.about.get-started' | translate }}</h2>
+        <code>Registeer uw bedrijf of uw zelf</code><br>
+        <code>Login met uw nieuwe gegevens</code><br>
+        <code>Alles is klaar om te beginnen</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="follow-releases" [ngClass]="routeAnimationsElements">
+    <h2>{{ 'dare.about.get-notified' | translate }}</h2>
+    <p>
+      {{ 'dare.about.get-notified.follow' | translate }}
+      {{ 'dare.about.get-notified.description' | translate }}
+    </p>
+  </div>
+</div>

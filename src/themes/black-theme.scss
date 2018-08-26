@@ -1,0 +1,9 @@
+$dare-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$dare-black-accent: mat-palette($mat-blue-grey, 400);
+$dare-black-warn: mat-palette($mat-red, 500);
+
+$dare-black-theme: mat-dark-theme(
+  $dare-black-primary,
+  $dare-black-accent,
+  $dare-black-warn
+);

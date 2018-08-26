@@ -1,0 +1,27 @@
+{
+  "dare.module.menu.todos": "Todos",
+  "dare.module.menu.auth": "Auth",
+  "dare.module.todos.input": "I am going to...",
+  "dare.module.todos.tooltip.add": "Add new todo",
+  "dare.module.todos.tooltip.remove": "Remove done todos",
+  "dare.module.todos.list": "Todo list",
+  "dare.module.todos.example": "Todo example",
+  "dare.module.todos.text1": "This is a classic",
+  "dare.module.todos.text2": "todo",
+  "dare.module.todos.text3":
+    "example with support for adding, toggling, removing and filtering of the todo items.",
+  "dare.module.todos.text4": "State handling is implemented using",
+  "dare.module.todos.text5":
+    "module and support for lazy loaded reducers (this is a lazy loaded feature module).",
+  "dare.module.todos.text6":
+    "Todos are persisted into local storage so you should see your todos also on later visits when using the same browser.",
+  "dare.module.todos.filter.all": "All",
+  "dare.module.todos.filter.done": "Done",
+  "dare.module.todos.filter.active": "Active",
+  "dare.module.todos.filter.description": "Displaying",
+  "dare.module.todos.filter.items": "todos",
+  "dare.module.todos.filter.item": "todo",
+  "dare.module.auth.title": "Authenticated component",
+  "dare.module.auth.description1":
+    "This component is only accessible for authenticated users"
+}

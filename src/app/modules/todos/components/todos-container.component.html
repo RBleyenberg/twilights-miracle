@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-md-2 col-md-8 entry">
+      <dare-big-input [placeholder]="'dare.module.todos.input' | translate"
+                      [value]="newTodo"
+                      (keyup)="onNewTodoChange($event.target.value)"
+                      (keyup.enter)="!isAddTodoDisabled && onAddTodo()"
+                      (keyup.escape)="onNewTodoClear()">
+        <dare-big-input-action fontSet="fas" fontIcon="fa-plus" color="accent"
+                               (action)="onAddTodo()"
+                               [disabled]="isAddTodoDisabled"
+                               [matTooltip]="'dare.module.todos.tooltip.add' | translate"
+                               matTooltipPosition="before">
+        </dare-big-input-action>
+        <dare-big-input-action fontSet="fas" fontIcon="fa-trash" color="warn"
+                               (action)="onRemoveDoneTodos()"
+                               [disabled]="isRemoveDoneTodosDisabled"
+                               matTooltip="Remove done todos"
+                               [matTooltip]="'dare.module.todos.tooltip.remove' | translate"
+                               matTooltipPosition="after">
+        </dare-big-input-action>
+      </dare-big-input>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-md-3 col-md-6 center">
+      <h2>
+        {{ 'dare.module.todos.list' | translate }}
+        <button class="todos-filter" mat-icon-button [matMenuTriggerFor]="todosFilter">
+          <mat-icon fontSet="fas" fontIcon="fa-filter"></mat-icon>
+        </button>
+        <mat-menu class="todos-filter-menu-overlay" #todosFilter="matMenu" xPosition="before">
+          <button mat-menu-item (click)="onFilterTodos('ALL')" [ngClass]="{ active: todos.filter === 'ALL' }">
+            <mat-icon fontSet="fas" fontIcon="fa-tasks"></mat-icon>
+            <span>{{ 'dare.module.todos.filter.all' | translate }}</span>
+          </button>
+          <button mat-menu-item (click)="onFilterTodos('DONE')" [ngClass]="{ active: todos.filter === 'DONE' }">
+            <mat-icon fontSet="fas" fontIcon="fa-check"></mat-icon>
+            <span>{{ 'dare.module.todos.filter.done' | translate }}</span>
+          </button>
+          <button mat-menu-item (click)="onFilterTodos('ACTIVE')" [ngClass]="{ active: todos.filter === 'ACTIVE' }">
+            <mat-icon fontSet="fas" fontIcon="fa-square"></mat-icon>
+            <span>{{ 'dare.module.todos.filter.active' | translate }}</span>
+          </button>
+        </mat-menu>
+        <mat-chip-list class="todos-filter-info d-none d-sm-block">
+          <mat-chip>
+            {{ 'dare.module.todos.filter.description' | translate }} {{todos.filter !==
+            'ALL' ? filteredTodos.length : ''}}
+            {{ ('dare.module.todos.filter.' + todos.filter.toLowerCase() |
+            translate).toLowerCase() }}
+            {{todos.filter === 'ALL' ? filteredTodos.length : ''}}
+            {{ 'dare.module.todos.filter.items' | translate }}
+          </mat-chip>
+        </mat-chip-list>
+      </h2>
+      <mat-card *ngFor="let todo of filteredTodos" class="todo"
+                [ngClass]="routeAnimationsElements">
+        <mat-checkbox class="todo-done" [checked]="todo.done" (change)="onToggleTodo(todo)"></mat-checkbox>
+        <span class="todo-label"
+              [ngClass]="{ 'todo-label-done': todo.done }"
+              (click)="onToggleTodo(todo)">
+          &nbsp;{{todo.name}}&nbsp;
+        </span>
+      </mat-card>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
