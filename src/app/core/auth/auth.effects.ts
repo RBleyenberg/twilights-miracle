@@ -6,13 +6,9 @@ import { tap } from 'rxjs/operators';
 
 import { LocalStorageService } from '../local-storage/local-storage.service';
 
-import {
-  ActionAuthLogin,
-  ActionAuthLogout,
-  AuthActionTypes
-} from './auth.actions';
+import { ActionAuthLogin, ActionAuthLogout, AuthActionTypes} from './auth.actions';
 
-export const AUTH_KEY = 'AUTH';
+export const AUTH_KEY = 'auth';
 
 @Injectable()
 export class AuthEffects {

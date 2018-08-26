@@ -3,10 +3,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivationEnd, Router } from '@angular/router';
 import { filter, takeUntil, map } from 'rxjs/operators';
-import { Subject } from 'rxjs';
-
-import { routeAnimations, TitleService, AuthGuardService } from '../core/index';
+import { Observable, Subject } from 'rxjs';
+import { routeAnimations, TitleService } from '@app/core';
 import { selectSettings, SettingsState } from '../settings/index';
+import { selectAuth } from '@app/core/auth/auth.selectors';
 
 import { State } from '../modules/modules.state';
 
@@ -18,10 +18,11 @@ import { State } from '../modules/modules.state';
 })
 export class LayoutComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();
+  private isAuthenticated$: Observable<boolean>;
 
   modules = [
     { link: 'todos', label: 'dare.module.menu.todos' },
-    { link: 'authenticated', label: 'dare.module.menu.auth' }
+    { link: 'authenticated', label: 'dare.module.menu.auth', auth: true }
   ];
 
   constructor(
@@ -29,13 +30,16 @@ export class LayoutComponent implements OnInit, OnDestroy {
     private router: Router,
     private titleService: TitleService,
     private translate: TranslateService,
-    private auth: AuthGuardService
   ) {}
 
   ngOnInit(): void {
     this.translate.setDefaultLang('en');
     this.subscribeToSettings();
     this.subscribeToRouterEvents();
+    this.isAuthenticated$ = this.store.pipe(
+      select(selectAuth),
+      map(auth => auth.isAuthenticated)
+    );
   }
 
   ngOnDestroy(): void {

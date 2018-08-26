@@ -4,17 +4,18 @@ import { Store, select } from '@ngrx/store';
 
 import { selectAuth } from './auth.selectors';
 import { AppState } from '../core.state';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Injectable()
 export class AuthGuardService implements CanActivate {
-  isAuthenticated = false;
 
-  constructor(private store: Store<AppState>) {
-    this.store
-      .pipe(select(selectAuth))
-      .subscribe(auth => (this.isAuthenticated = auth.isAuthenticated));
-  }
-  canActivate(): boolean {
-    return this.isAuthenticated;
+  constructor(private store: Store<AppState>) {}
+
+  canActivate(): Observable<boolean> {
+    return this.store.pipe(
+      select(selectAuth),
+      map(auth => auth.isAuthenticated)
+    );
   }
 }
