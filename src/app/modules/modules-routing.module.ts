@@ -5,7 +5,7 @@ import { AuthGuardService } from '@app/core';
 
 import { LayoutComponent } from '../layout-modules/layout.component';
 import { ParentComponent } from '../settings/theming/parent/parent.component';
-import { AuthenticatedComponent } from '../authenticated/authenticated.component';
+import { AuthenticatedComponent } from './authenticated/authenticated.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 
 const routes: Routes = [

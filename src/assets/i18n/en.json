@@ -1,7 +1,6 @@
 {
-  "dare.title": "Dare-solutions",
-  "dare.title.short": "Angular Starter",
-  "dare.header.github": "Project Github Repository",
+  "dare.title": "ERP software gratis - Dare-solutions",
+  "dare.title.short": "ERP software gratis - Dare-solutions",
   "dare.footer.changelog": "Show changelog",
   "dare.menu.about": "About",
   "dare.menu.features": "Features",
@@ -10,21 +9,11 @@
   "dare.menu.login": "Sign in",
   "dare.menu.logout": "Logout",
   "dare.about.change-theme": "Change Theme",
-  "dare.about.check-blogs": "or check blogs about",
   "dare.about.get-started": "Get started",
   "dare.about.get-notified": "Get notified about new releases",
   "dare.about.get-notified.follow": "Follow",
   "dare.about.get-notified.description":
     "a Twitter bot that helps you to stay up to date with releases of popular frontend frameworks & libraries!",
-  "dare.about.contributors": "Contributors",
-  "dare.about.contributors.description1":
-    "Want to start contributing to open source with Angular?",
-  "dare.about.contributors.description2":
-    "Leave your mark and join the growing team of contributors!",
-  "dare.about.contributors.description3": "Get started by having a look on ",
-  "dare.about.contributors.description4": " and ",
-  "dare.about.contributors.issues": "open issues",
-  "dare.about.contributors.guide": "Contributor guide",
   "dare.features.title": "Features",
   "dare.features.documentation": "Docs",
   "dare.features.guide": "Guide",

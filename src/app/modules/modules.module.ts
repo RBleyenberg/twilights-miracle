@@ -13,7 +13,7 @@ import { ModulesRoutingModule } from './modules-routing.module';
 import { LayoutComponent } from '../layout-modules/layout.component';
 import { TodosContainerComponent } from './todos/components/todos-container.component';
 import { TodosEffects } from './todos/todos.effects';
-import { AuthenticatedComponent } from '../authenticated/authenticated.component';
+import { AuthenticatedComponent } from './authenticated/authenticated.component';
 
 @NgModule({
   imports: [

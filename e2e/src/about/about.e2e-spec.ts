@@ -9,7 +9,7 @@ describe('About Page', () => {
   it('should display main heading', () => {
     page.navigateTo();
     // @ts-ignore
-    expect(page.getParagraphText()).toEqual('ERP software gratis - Dare-solutions');
+    expect(page.getParagraphText()).toEqual('ERP SOFTWARE GRATIS - DARE-SOLUTIONS');
   });
 
   it('should display "Geting Started" section', () => {

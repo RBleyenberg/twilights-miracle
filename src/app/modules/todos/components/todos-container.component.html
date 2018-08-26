@@ -45,10 +45,8 @@
         </mat-menu>
         <mat-chip-list class="todos-filter-info d-none d-sm-block">
           <mat-chip>
-            {{ 'dare.module.todos.filter.description' | translate }} {{todos.filter !==
-            'ALL' ? filteredTodos.length : ''}}
-            {{ ('dare.module.todos.filter.' + todos.filter.toLowerCase() |
-            translate).toLowerCase() }}
+            {{ 'dare.module.todos.filter.description' | translate }} {{todos.filter !== 'ALL' ? filteredTodos.length : ''}}
+            {{ ('dare.module.todos.filter.' + todos.filter.toLowerCase() | translate).toLowerCase() }}
             {{todos.filter === 'ALL' ? filteredTodos.length : ''}}
             {{ 'dare.module.todos.filter.items' | translate }}
           </mat-chip>

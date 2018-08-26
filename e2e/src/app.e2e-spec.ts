@@ -9,18 +9,20 @@ describe('App', () => {
 
   it('should redirect to "about" route', () => {
     page.navigateTo();
+    // @ts-ignore
     expect(getCurrentRouteUrl()).toEqual('about');
   });
 
   it('should display current year in the footer', () => {
     page.navigateTo();
+    // @ts-ignore
     expect(page.getCurrentYear()).toEqual(new Date().getFullYear().toString());
   });
 
-  it('should have "About", "Features", "Examples" menus', () => {
+  it('should have "About", "Features", "Modules" menus', () => {
     page.navigateTo();
     page
       .getAllMenus()
-      .then(menus => expect(menus).toEqual(['About', 'Features', 'Examples']));
+      .then(menus => expect(menus).toEqual(['About', 'Features', 'Modules']));
   });
 });
