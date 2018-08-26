@@ -7,10 +7,7 @@ export const initialState: TodosState = {
   items: [
     { id: uuid(), name: 'Twilight\'s powers', done: true },
     { id: uuid(), name: 'Awesome ponies', done: false },
-    {
-      id: uuid(),
-      name: 'Beastmode activated',
-      done: false
+    { id: uuid(), name: 'Beastmode activated', done: false
     }
   ],
   filter: 'ALL'
