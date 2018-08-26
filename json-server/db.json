@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "firstname": "Twilight",
+      "lastname": "Sparkles",
+      "saleId": ["1"]
+    },
+    {
+      "id": "2",
+      "firstname": "Rainbow",
+      "lastname": "Dash",
+      "saleId": ["2"]
+    }
+  ],
+  "sales": [
+    {
+      "id": "1",
+      "title": "sales id 1 title"
+    },
+    {
+      "id": "2",
+      "title": "sales id 2 title"
+    }
+  ]
+}
